@@ -17,8 +17,7 @@ st.sidebar.write("## Upload and download :gear:")
 def convert_image(img):
     buf = BytesIO()
     img.save(buf, format="PNG")
-    byte_im = buf.getvalue()
-    return byte_im
+    return buf.getvalue()
 
 
 def fix_image(upload):
