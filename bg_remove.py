@@ -26,8 +26,7 @@ MAX_IMAGE_SIZE = 2000  # pixels
 def convert_image(img):
     buf = BytesIO()
     img.save(buf, format="PNG")
-    byte_im = buf.getvalue()
-    return byte_im
+    return buf.getvalue()
 
 # Resize image while maintaining aspect ratio
 def resize_image(image, max_size):
